@@ -155,6 +155,7 @@ def sql_lab(request):
 
             if login.objects.filter(user=name):
 
+
                 sql_query = "SELECT * FROM introduction_login WHERE user='"+name+"' AND password='"+password+"'"
                 print(sql_query)
                 try:
