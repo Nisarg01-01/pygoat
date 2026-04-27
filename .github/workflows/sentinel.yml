@@ -1,0 +1,30 @@
+name: Sentinel PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - master
+
+jobs:
+  sentinel-review:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+
+    steps:
+      - name: Checkout PyGoat
+        uses: actions/checkout@v4
+
+      - name: Run Sentinel
+        uses: Nisarg01-01/sentinel-pr-review@main
+        with:
+          project-endpoint: ${{ secrets.AZURE_FOUNDRY_ENDPOINT }}
+          azure-client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          azure-tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          azure-client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+          azure-search-endpoint: ${{ secrets.AZURE_SEARCH_ENDPOINT }}
+          azure-search-key: ${{ secrets.AZURE_SEARCH_KEY }}
+          mcp-function-url: ${{ secrets.MCP_FUNCTION_URL }}
+          mcp-function-key: ${{ secrets.MCP_FUNCTION_KEY }}
