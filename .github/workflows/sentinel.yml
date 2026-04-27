@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Sentinel
-        uses: Nisarg01-01/sentinel-pr-review@main
+        uses: Nisarg01-01/sentinel-pr-review@master
         with:
           project-endpoint: ${{ secrets.AZURE_FOUNDRY_ENDPOINT }}
           azure-client-id: ${{ secrets.AZURE_CLIENT_ID }}
