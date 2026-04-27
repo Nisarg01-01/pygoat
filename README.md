@@ -21,6 +21,8 @@ Table of Contents
 
 ## Installation
 
+<!-- reviewed by Sentinel -->
+
 ### From Sources
 
 To setup the project on your local machine:
