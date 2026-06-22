@@ -25,6 +25,8 @@ Table of Contents
 
 To setup the project on your local machine:
 <br>
+---Adding a line to test triage agent decision making---
+
 
 First, Clone the repository using GitHub website or git in Terminal
 ```
