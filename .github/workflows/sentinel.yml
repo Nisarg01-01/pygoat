@@ -19,7 +19,11 @@ jobs:
 
       - name: Run Sentinel
         uses: Nisarg01-01/sentinel-pr-review@master
-        with:
+        with:          
+          azure-inference-key: ${{ secrets.AZURE_INFERENCE_KEY }}
+          vuln-model: gpt-4.1
+          report-model: gpt-4.1
+          azure-storage-connection-string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
           project-endpoint: ${{ secrets.AZURE_FOUNDRY_ENDPOINT }}
           azure-client-id: ${{ secrets.AZURE_CLIENT_ID }}
           azure-tenant-id: ${{ secrets.AZURE_TENANT_ID }}
